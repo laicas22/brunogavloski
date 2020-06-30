@@ -1,9 +1,13 @@
+var input, value;
+
 function setup() {
-  createCanvas(200, 200);
+  noCanvas();
+  input = createInput();
+ input.changed(newText);
+  
 }
-function draw() {
-  // put drawing code here
-  background(10);
-  fill(255,0,0);
-  rect(100,100,50,50);
+
+function newText() {
+  console.log(input.value());
+
 }
